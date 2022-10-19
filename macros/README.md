@@ -18,6 +18,38 @@ curl 'https://static.us-east-1.prod.workshops.aws/public/ba38c170-1f4d-4335-b8ce
 dbt run-operation macro_hello_world_1
 ```
 
-<!-- insert images in markdown-->
+3. Run dbt run-operation macro_hello_world_2 to showcase set, [], and for which are used to create a variable, represent a list and loop a list respectively. It is interesting to note that when a variable defined outside of a loop is updated inside the loop, the variable retains its original value.
 
-![macro_hello_world_1]
+```bash
+dbt run-operation macro_hello_world_2
+```
+
+4. Run dbt run-operation macro_hello_world_3 to showcase namespace() which is used to hold variables created outside of a loop that when updated inside a loop, reflects the updated value. Think of variables held in namespace as global variables.
+
+```bash
+dbt run-operation macro_hello_world_3
+```
+
+5. Run dbt run-operation macro_hello_world_4 to showcase if, elif, and else which are used to test conditions.
+
+```bash
+dbt run-operation macro_hello_world_4
+```
+
+6. Run dbt run-operation macro_hello_world_5 to showcase run_query which sends a direct query to Amazon Redshift for processing.
+
+```bash
+dbt run-operation macro_hello_world_5
+```
+
+7. Run dbt run-operation macro_hello_world_6 --args "{'input': 'ABC'}" to showcase the defining and passing of an input.
+
+```bash
+dbt run-operation macro_hello_world_6 --args "{'input': 'ABC'}"
+```
+
+8. Run dbt run-operation macro_hello_world_7 to showcase the usage of dictionary data structure.
+
+```bash
+dbt run-operation macro_hello_world_7
+```
